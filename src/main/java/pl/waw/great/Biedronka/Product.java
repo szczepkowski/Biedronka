@@ -21,6 +21,9 @@ class Product {
         this.created = LocalDateTime.now();
     }
 
+    public Product() {
+    }
+
     public int getId() {
         return id;
     }
@@ -50,5 +53,10 @@ class Product {
                 ", amount=" + amount +
                 ", created=" + created +
                 '}';
+    }
+
+    public int calculate(int a,int b){
+        int sum = a + b;
+        return sum;
     }
 }

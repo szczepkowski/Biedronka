@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ProductTest {
@@ -20,5 +21,13 @@ class ProductTest {
         assertTrue(chleb.getName().equals("chleb"));
         assertTrue(chleb.getPrice().equals( BigDecimal.valueOf(20)));
 
+    }
+
+
+    @Test
+    void calculate() {
+        Product product = new Product();
+        int calculate = product.calculate(1, 2);
+        assertEquals(calculate, 3);
     }
 }
